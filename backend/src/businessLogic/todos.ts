@@ -1,6 +1,6 @@
 import { TodosAccess } from '../dataLayer/todosAcess'
 import { TodoItem } from '../models/TodoItem'
-import {CreateTodoRequest,CreateTodoPayload} from '../requests/CreateTodoRequest'
+import {CreateTodoRequest} from '../requests/CreateTodoRequest'
 import { UpdateTodoRequest } from '../requests/UpdateTodoRequest'
 import { TodoUpdate } from '../models/TodoUpdate'
 import { getImageUrl } from './attachmentUtils'
