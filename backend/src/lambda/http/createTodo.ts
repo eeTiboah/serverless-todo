@@ -10,7 +10,7 @@ export const handler = middy(
   async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
     const newTodo: CreateTodoRequest = JSON.parse(event.body)
     const { name, dueDate } = newTodo
-    if (!dueDate || !name || name.trim() == '') {
+    if (!dueDate || !name) {
       return {
         statusCode: 400,
         body: JSON.stringify({
