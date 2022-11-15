@@ -9,15 +9,6 @@ import { createTodo } from '../../businessLogic/todos'
 export const handler = middy(
   async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
     const newTodo: CreateTodoRequest = JSON.parse(event.body)
-    const { name, dueDate } = newTodo
-    if (!dueDate || !name) {
-      return {
-        statusCode: 400,
-        body: JSON.stringify({
-          message: 'Name or dueDate cannot be null'
-        })
-      }
-    }
 
     try {
       const token = getJwtToken(event)
